@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 20px 100px;
+}
+
+#div-box {
+    background-color: green;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    /* justify-items: center; */
+}
+
+#div-box > div {
+    margin: 20px;
+    border-radius: 20px;
+    width: 1000px;
+    height: 1000px;
+    background-color: red;
+    color: antiquewhite;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

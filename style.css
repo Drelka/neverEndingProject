@@ -1,33 +1,39 @@
-* {
+*, ::after, ::before {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
 html {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
-    margin: 20px 100px;
+    background-color: grey;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #div-box {
-    background-color: green;
+    background-color: darkslategrey;
     justify-self: center;
     align-self: center;
     display: flex;
-    flex-direction: column;
+    padding: 0 100px;
+    /* flex-direction: column; */
     /* justify-items: center; */
 }
 
-#div-box > div {
-    margin: 20px;
-    border-radius: 20px;
+.mid-div > div {
     width: 1000px;
     height: 1000px;
-    background-color: red;
-    color: antiquewhite;
+    margin: 20px;
+    border-radius: 10%;
+    border: 3px solid #000;
+    background-color: rgb(138, 152, 167);
     font-size: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.L-1 > p {
+    padding: 30px;
 }

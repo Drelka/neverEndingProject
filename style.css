@@ -29,29 +29,6 @@ p {
     padding: 0 100px;
 }
 
-.mid-div > div {
-    width: 1000px;
-    height: 1000px;
-    margin: 20px;
-    border-radius: 10%;
-    border: 3px solid #000;
-    background-color: rgb(138, 152, 167);
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mid-div > div{
-    /* flex-direction: row; */
-}
-
-.mid-div > div > div{
-    max-width: 70%;
-    display: flex;
-    flex-direction: row;
-}
-
 .code {
     font-family: 'Courier New', Courier, monospace;
     border-left: 3px solid #000;
@@ -73,21 +50,41 @@ p {
     color: darkgreen;
 }
 
+.mid-div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.L,
+.R {
+    width: 1000px;
+    height: 1000px;
+    margin: 20px;
+    padding: 15%;
+    border-radius: 10%;
+    border: 3px solid #000;
+    background-color: rgb(138, 152, 167);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.L > div,
+.R > div{
+    flex-direction: row;
+ }
+
+.L-1 > div > div,
+.R-2 > div > div {
+    padding: 10px;
+ }
+
+
 .R-2 th {
     padding-right: 30px;
 }
 
-.R-1,
-.L-2 {
+.R-2 > div {
     flex-direction: column;
- }
-
-.R-1 > div,
-.L-2 > div{
-    flex-direction: row;
- }
-
-.R-1 > div > div,
-.L-2 > div > div {
-    padding: 10px;
- }
+}

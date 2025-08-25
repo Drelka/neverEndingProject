@@ -1,3 +1,18 @@
+/*   
+
+THIS CSS DIVIDES INTO:
+
+1    PURE ELEMENTS
+2    ELEMENT'S ELEMENTS
+3    MAIN DIVS
+4    2nd CLASS DIVS AND THEIR ELEMENTS
+5.1  IDs
+5.2  ID'S ELEMENTS
+6.1  CLASSES
+6.2  CLASS'S ELEMENTS
+7    REST                                       */
+
+
 *, ::after, ::before {
     box-sizing: border-box;
     padding: 0;
@@ -11,15 +26,34 @@ html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* ----------------------------------------------- PURE ELEMENTS */
+
+h3 {
+    text-align: center;
+    padding-bottom: 50px;
+    text-decoration: underline;
+}
+
 span {
     font-family: inherit;
     font-size: inherit;
-
 }
 
 p {
     font-size: 28px;
 }
+
+/* ----------------------------------------- ELEMENT' S ELEMENTS */
+
+table *{
+    padding: 5px;
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(0, 128, 128, 0.342);
+}
+
+/* --------------------------------------------------- MAIN DIVS */
 
 #div-box {
     background-color: darkslategrey;
@@ -27,27 +61,6 @@ p {
     align-self: center;
     display: flex;
     padding: 0 100px;
-}
-
-.code {
-    font-family: 'Courier New', Courier, monospace;
-    border-left: 3px solid #000;
-    padding-left: 10px;
-    font-size: 18px;
-    margin: 10px;
-}
-
-.comment {
-    color: rgba(0, 0, 0, 0.596);
-    float: right;
-}
-
-.red-text {
-    color: darkred;
-}
-
-.green-text {
-    color: darkgreen;
 }
 
 .mid-div div {
@@ -70,16 +83,16 @@ p {
     align-items: center;
 }
 
+/* --------------------------- 2nd CLASS DIVS AND THEIR ELEMENTS */
 .L > div,
 .R > div{
     flex-direction: row;
- }
+}
 
 .L-1 > div > div,
 .R-2 > div > div {
     padding: 10px;
- }
-
+}
 
 .R-2 th {
     padding-right: 30px;
@@ -88,3 +101,40 @@ p {
 .R-2 > div {
     flex-direction: column;
 }
+
+/* --------------------------------------------------------- IDs */
+
+/* (EMPTY) */
+
+/* ----------------------------------------------- ID'S ELEMENTS */
+
+/* (EMPTY) */
+
+/* ----------------------------------------------------- CLASSES */
+
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    border-left: 3px solid #000;
+    padding-left: 10px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.comment {
+    color: rgba(0, 0, 0, 0.596);
+    float: right;
+}
+
+.red-text {
+    color: darkred;
+}
+
+.green-text {
+    color: darkgreen;
+}
+
+/* -------------------------------------------- CLASS'S ELEMENTS */
+
+/* (EMPTY) */
+
+/* -------------------------------------------------------- REST */

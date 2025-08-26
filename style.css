@@ -1,5 +1,9 @@
 /*   
 
+VSCode wrap text (alt + Z)
+
+--------------------------------
+
 THIS CSS DIVIDES INTO:
 
 1    PURE ELEMENTS
@@ -73,7 +77,7 @@ table tr:nth-child(even) {
     width: 1000px;
     height: 1000px;
     margin: 20px;
-    padding: 15%;
+    padding: 5%;
     border-radius: 10%;
     border: 3px solid #000;
     background-color: rgb(138, 152, 167);
@@ -131,6 +135,10 @@ table tr:nth-child(even) {
 
 .green-text {
     color: darkgreen;
+}
+
+.vertical-spacer {
+    width: 30px;
 }
 
 /* -------------------------------------------- CLASS'S ELEMENTS */

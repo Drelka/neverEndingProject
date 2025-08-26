@@ -38,7 +38,7 @@
                         <p>&lt;=</p>
                         <p>?</p>
                     </div>
-                    <div class="vertical spacer"></div>
+                    <div class="vertical-spacer"></div>
                     <div>
                         <p>equal</p>
                         <p>strict equal (value and type)</p>
@@ -53,10 +53,18 @@
                 </div>
             </div>
             <div class="L L-3">
+                <h1>"?"</h1><br><br>
+                <h3>Ternary operator</h3>
                 <div>
-                    <h3>Ternary operator</h3>
                     <div>
-
+                        <p> ...is a one-line code for a simple "if...else" statement and returns one of two expressions, just such:</p><br><br>
+                        <p class="code">condition ? expression_if_true : expression_if_false;</p><br>
+                        <p class="code">
+                            let retirementAge = 65;<br>
+                            let myAge = 35;<br>
+                            let isRetired = myAge &gt;= retirementAge ? "Retired" : "Not retired";<br>
+                            console.log(isRetired);
+                        </p>
                     </div>
                 </div>
             </div>
@@ -68,6 +76,9 @@
             <div class="L L-9">X</div>
             <div class="L L-10">X</div>
         </div>
+
+<!-- ------------ Right side starts here--------------- -->
+
         <div class="mid-div">
             <div class="R R-1">
                 <h3><u>Arithmetic operators</u></h3>
@@ -82,6 +93,7 @@
                         <p>++</p>
                         <p>--</p>
                     </div> 
+                    <div class="vertical-spacer"></div>
                     <div>
                         <p>Addition</p>
                         <p>Subtraction</p>
@@ -141,7 +153,27 @@
                         </table>
                 </div>
             </div>
-            <div class="R R-3">X</div>
+            <div class="R R-3">
+                <h1>&#96; ... &#96;</h1><br><br>
+                <h3>Backquotes / Backticks</h3><br>
+                <div>
+                    <div>
+                        <p>... are used to define template literals - a special type of string allowing us to embed expressions and JavaScript in them. You can also declare them over multiple lines. </p><br><br>
+                        <p class="code">
+                            let name = "Christina";<br>
+                            let greeting = `Hello, ${name}. Nice to meet you.`;<br><br>
+                            let age = 22;<br>
+                            let answer = `Hi. My name is ${name}. I&apos;m ${age} years old.`;<br><br>
+
+                            let brotherAge = 15;<br>
+                            console.log(`I am ${age - brotherAge} years older than my brother.`);<br><br>
+                            let msg = `I can spread the message <span class="comment">* I can spread the message</span> <br>
+                            into multiple <span class="comment">into multiple &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <br>
+                            lines. <span class="comment">lines. *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="R R-4">X</div>
             <div class="R R-5">X</div>
             <div class="R R-6">X</div>

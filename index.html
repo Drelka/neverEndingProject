@@ -11,17 +11,29 @@
     <div id="div-box">
         <div class="mid-div">
             <div class="L L-1">
-                <h3>Creating variables</h3>
+                <h1>let, const<span class="faded">, var</span></h1>
+                <h3> variables</h3>
                 <div>
                     <div>
                         <p>
+                            Variables are containers that store your data. You should declare them before you use them. <br>
                             <strong>Const</strong> creates a variable whose reference cannot be reassigned, while <strong>let</strong> creates a variable that can be reassigned.
                         </p> <br><br>
                         <p class="code">
-                            const name = "Joe" <span class="comment">//This can never change</span><br>
-                            let age = 22<br><br>
-                            name = "Jamie" <span class="comment">//throwing <span class="red-text">error</span></span><br>
-                            age = 33 <span class="comment">//new value is <span class="green-text">valid</span></span>
+                            <strong>let</strong> month; <span class="comment">// declaration only</span><br>
+                            month = "January"; <span class="comment">// assignment</span><br>
+                            month = "February"; <span class="comment">// re-assignment</span><br><br>
+                            <strong>const</strong> name = "Joe" <span class="comment">// declaration and assignment</span><br>
+                            <strong>let</strong> age = 22;<br><br>
+                            name = "Jamie"; <span class="comment">// can't reassign value for const, throwing <span class="red-text">error</span></span><br>
+                            age = 33; <span class="comment">// new value is <span class="green-text">valid</span></span>
+                        </p> <br><br>
+                        <p>
+                            There's also a third kind of a variable - <span class="faded"><strong>var</strong></span> - but it's been depreciated and now should be used only to support older browsers (but you can still find it in older projects).
+                        </p> <br><br>
+                        <p class="code">
+                            <strong>var</strong> waistSize = 80; <span class="comment">// don't use unless you must</span> <br>
+                            waistSize = 100; <span class="comment">// can be re-assigned</span>
                         </p>
                     </div>
                 </div>
@@ -252,9 +264,9 @@
 
                             let brotherAge = 15;<br>
                             console.log(`I am ${age - brotherAge} years older than my brother.`);<br><br>
-                            let msg = `I can spread the message <span class="comment">* I can spread the message</span> <br>
-                            into multiple <span class="comment">into multiple &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <br>
-                            lines. <span class="comment">lines. *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>`
+                            let msg = `I can spread the message <span class="comment">// I can spread the message</span> <br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;into multiple <span class="comment">// into multiple &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span> <br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;lines.`;<span class="comment">// lines.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
                         </p>
                     </div>
                 </div>
@@ -267,7 +279,7 @@
                         <p>
                             The loop "for" we use when we know how many times we want to loop. <br>
                             The "while" start the loop only when the condition is true, then keeps looping as long as it stays true. <br>
-                            The "do...while" is guaranteed to execute at least once, only after the first loop it checks the condition.
+                            The "do...while" is guaranteed to execute at least once. After first execusion it checks for the condition.
                         </p> <br>
                         <p class="code">
                             <strong>for</strong> (let i = 0; i &lt; 3; i++) { <br>
@@ -277,14 +289,18 @@
                             let i = 0; <br>
                             <strong>while</strong> (i &lt; 3) { <br>
                             &nbsp;&nbsp;console.log("The number is " + i); <br>
-                            &nbsp;&nbsp;i++; <span class="comment">// avoid an infinite loop!</span><br>
-                            } <br><br>
+                            &nbsp;&nbsp;i++; <span class="comment"> --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; // remember to place condition here </span><br>
+                            } <span class="comment">to avoid an infinite loop!</span><br><br>
 
                             let i = 5; <br>
-                            <strong>do</strong> { <span class="comment">// Still being executed</span><br>
+                            <strong>do</strong> { <span class="comment"> // this guarantees execution</span><br>
                             &nbsp;&nbsp;console.log("The number is " + i); <br>
-                            &nbsp;&nbsp;i++; <br>
-                            } <strong>while</strong> (i &lt; 3);
+                            &nbsp;&nbsp;i++; <span class="comment">--&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; // avoid an infinite loop!</span><br>
+                            } <strong>while</strong> (i &lt; 3); 
+                        </p> <br>
+                        <p>
+                            <strong>REMEMBER: <br>
+                                To prevent a "while" / "do...while" loop from becoming infinite, a statement inside the loop must modify the condition so it can eventually become false.</strong>
                         </p>
                     </div>
                 </div>

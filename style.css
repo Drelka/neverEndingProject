@@ -157,8 +157,8 @@ table tr:nth-child(even) {
     background-color: rgba(0, 0, 0, 0.123);
 }
 
-.L-5 p:first-child {
-    /* font-size: 1.5rem; */
+.faded {
+    color: #092d3d9d;
 }
 
 /* -------------------------------------------- CLASS'S ELEMENTS */

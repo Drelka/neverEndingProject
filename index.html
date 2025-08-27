@@ -101,23 +101,23 @@
                         </p> <br>
                         <p class="code">
                             <strong>if</strong> (asnwer === "yes") { <br>
-                            &nbsp;&nbsp;return gameContinue(); <br>
+                            &emsp;return gameContinue(); <br>
                             } <br><br>
 
                             <strong>if</strong> (age &gt;= 18) { <br>
-                            &nbsp;&nbsp;ageValidation = pass; <br>
+                            &emsp;ageValidation = pass; <br>
                             } <strong>else</strong> { <br>
-                            &nbsp;&nbsp;ageValidation = fail; <br>
+                            &emsp;ageValidation = fail; <br>
                             } <br><br>
 
                             <strong>if</strong> (year ==  2025) { <br>
-                            &nbsp;&nbsp;time = present; <br>
+                            &emsp;time = present; <br>
                             } <strong>else if</strong> (year &gt; 2025) { <br>
-                            &nbsp;&nbsp;time = future; <br>
+                            &emsp;time = future; <br>
                             } <strong>else if</strong> (year &lt; 2025) { <br>
-                            &nbsp;&nbsp;time = past; <br>
+                            &emsp;time = past; <br>
                             } <strong>else</strong> { <br>
-                            &nbsp;&nbsp;return error404(); <br>
+                            &emsp;return error404(); <br>
                             } 
 
                         </p>
@@ -130,34 +130,34 @@
                 <div>
                     <div>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;Works as an alternative to "else...if" statement, but can execute code for more than one case. It performs different actions based on different options (cases). After executing the code for a certain case, it uses "break" keyword to exit from itself. If it's missing, the code will execute further. <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;The last (optional) case is named "default" and is similar to "else" in "else...if" statement. <br><br>
+                            &emsp;Works as an alternative to "else...if" statement, but can execute code for more than one case. It performs different actions based on different options (cases). After executing the code for a certain case, it uses "break" keyword to exit from itself. If it's missing, the code will execute further. <br>
+                            &emsp;The last (optional) case is named "default" and is similar to "else" in "else...if" statement. <br><br>
                         </p>
                         <p class="code">
                             <strong>switch</strong> (expression) { <br>
-                            &nbsp;&nbsp;<strong>case</strong> value1: <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;return execution1;<span class="comment">// Code to execute if expression === value1</span> <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
-                            &nbsp;&nbsp;<strong>case</strong> value2: <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;return execution2;<span class="comment">// Code to execute if expression === value2</span> <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
-                            &nbsp;&nbsp;((case...break;) * N)<span class="comment">// ... more cases</span> <br>
-                            &nbsp;&nbsp;<strong>default</strong>: <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;// Code to execute if none of the cases match <br>
+                            &emsp;<strong>case</strong> value1: <br>
+                            &emsp;&emsp;return execution1;<span class="comment">// Code to execute if expression === value1</span> <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>case</strong> value2: <br>
+                            &emsp;&emsp;return execution2;<span class="comment">// Code to execute if expression === value2</span> <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;((case...break;) * N)<span class="comment">// ... more cases</span> <br>
+                            &emsp;<strong>default</strong>: <br>
+                            &emsp;&emsp;// Code to execute if none of the cases match <br>
                             } <br><br>
 
                             <strong>switch</strong> (colourLike) { <br>
-                            &nbsp;&nbsp;<strong>case</strong> "blue": <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("blue is the sky"); <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
-                            &nbsp;&nbsp;<strong>case</strong> "green": <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("green is the grass"); <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
-                            &nbsp;&nbsp;<strong>case</strong> "pink": <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("pink is the pig"); <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
-                            &nbsp;&nbsp;<strong>default</strong>: <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("no colors for today, wait until tomorrow"); <br>
+                            &emsp;<strong>case</strong> "blue": <br>
+                            &emsp;&emsp;console.log("blue is the sky"); <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>case</strong> "green": <br>
+                            &emsp;&emsp;console.log("green is the grass"); <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>case</strong> "pink": <br>
+                            &emsp;&emsp;console.log("pink is the pig"); <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>default</strong>: <br>
+                            &emsp;&emsp;console.log("no colors for today, wait until tomorrow"); <br>
                             }
                         </p>
                     </div>
@@ -283,19 +283,19 @@
                         </p> <br>
                         <p class="code">
                             <strong>for</strong> (let i = 0; i &lt; 3; i++) { <br>
-                            &nbsp;&nbsp;console.log("The number is " + i); <br>
+                            &emsp;console.log("The number is " + i); <br>
                             } <br><br>
 
                             let i = 0; <br>
                             <strong>while</strong> (i &lt; 3) { <br>
-                            &nbsp;&nbsp;console.log("The number is " + i); <br>
-                            &nbsp;&nbsp;i++; <span class="comment"> --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; // remember to place condition here </span><br>
+                            &emsp;console.log("The number is " + i); <br>
+                            &emsp;i++; <span class="comment"> --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; // remember to place condition here </span><br>
                             } <span class="comment">to avoid an infinite loop!</span><br><br>
 
                             let i = 5; <br>
                             <strong>do</strong> { <span class="comment"> // this guarantees execution</span><br>
-                            &nbsp;&nbsp;console.log("The number is " + i); <br>
-                            &nbsp;&nbsp;i++; <span class="comment">--&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; // avoid an infinite loop!</span><br>
+                            &emsp;console.log("The number is " + i); <br>
+                            &emsp;i++; <span class="comment">--&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; // avoid an infinite loop!</span><br>
                             } <strong>while</strong> (i &lt; 3); 
                         </p> <br>
                         <p>
@@ -311,19 +311,19 @@
                 <div>
                     <div>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>for...of</strong> <br>
+                            &emsp;<strong>for...of</strong> <br>
                             - Loop iterates over the <i>values</i> of iterable objects (ie: arrays, strings, maps, sets). <br>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>for...in</strong> <br>
+                            &emsp;<strong>for...in</strong> <br>
                             - This loop iterates over the <i>enumerable properties</i> of an object. It's not recommended for arrays.
                         </p> <br>
                         <p class="code">
                             const fruits = ['pear', 'kiwi', 'grspes', 'avocado', 'tomatoe']; <br>
-                            <strong>for</strong> (const fruit <strong>of</strong> fruits) { <br>
+                            &emsp;<strong>for</strong> (const fruit <strong>of</strong> fruits) { <br>
                             console.log(fruit); <br>
                             } <br><br>
 
                             const person = { name: "Alice", age: 30 }; <br>
-                            <strong>for</strong> (const key <strong>in</strong> person) { <br>
+                            &emsp;<strong>for</strong> (const key <strong>in</strong> person) { <br>
                               console.log(`${key}: ${person[key]}`); <br>
                             }
                         </p>

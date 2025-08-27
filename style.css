@@ -28,6 +28,8 @@ html {
     min-height: 100vh;
     background-color: grey;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 24px;
+
 }
 
 /* ----------------------------------------------- PURE ELEMENTS */
@@ -37,8 +39,7 @@ html {
 } */
 
 h1 {
-    /* padding-bottom: 10px; */
-    border-top: 3px solid #000;
+    padding-bottom: 10px;
 }
 
 h3 {
@@ -53,7 +54,6 @@ span {
 }
 
 p {
-    font-size: 28px;
 }
 
 /* ----------------------------------------- ELEMENT' S ELEMENTS */
@@ -90,7 +90,7 @@ table tr:nth-child(even) {
     border-radius: 10%;
     border: 3px solid #000;
     background-color: rgb(138, 152, 167);
-    font-size: 30px;
+    /* font-size: 30px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +118,7 @@ table tr:nth-child(even) {
 
 .L p,
 .R p {
-    min-width: 200px;
+    min-width: 100px;
 }
 
 /* --------------------------------------------------------- IDs */
@@ -153,11 +153,13 @@ table tr:nth-child(even) {
     color: darkgreen;
 }
 
-.vertical-spacer {
-    width: 30px;
+.darkGreyBackground {
+    background-color: rgba(0, 0, 0, 0.123);
 }
 
-/*  */
+.L-5 p:first-child {
+    /* font-size: 1.5rem; */
+}
 
 /* -------------------------------------------- CLASS'S ELEMENTS */
 

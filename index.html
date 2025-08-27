@@ -28,19 +28,21 @@
             </div>
             <div class="L L-2">
                 <h3>Comparison operators</h3>
+                <p>
+                    They compare two values and return a boolean value - either True, or False. <br><br>
+                </p>
                 <div>
                     <div>
                         <p>==</p>
                         <p>===</p>
                         <p>!=</p>
-                        <p>!===</p>
+                        <p>!==</p>
                         <p>&gt;</p>
                         <p>&lt;</p>
                         <p>&gt;=</p>
                         <p>&lt;=</p>
                         <p>?</p>
                     </div>
-                    <div class="vertical-spacer"></div>
                     <div>
                         <p>equal</p>
                         <p>strict equal (value and type)</p>
@@ -52,7 +54,12 @@
                         <p>lesser than or equal</p>
                         <p>ternary operator</p>
                     </div>
-                </div>
+                </div> <br>
+                <p>
+                    6 falsy values in JavaScript that return False, are: <br><br>
+                    -<strong>false</strong>, -<strong>0</strong>, -<strong><span class="darkGreyBackground">" "</span></strong> or <strong><span class="darkGreyBackground">' '</span></strong> or <span class="darkGreyBackground">&nbsp;</span> (an empty string / empty space), <br>-<strong>null</strong>, -<strong>undefined</strong>, -<strong>NaN</strong>. <br><br>
+                    All the rest is considered a True value.
+                </p>
             </div>
             <div class="L L-3">
                 <h1>"?"</h1>
@@ -60,11 +67,11 @@
                 <div>
                     <div>
                         <p> ...is a one-line code for a simple "if...else" statement and returns one of two expressions, just such:</p><br><br>
-                        <p class="code">condition ? expression_if_true : expression_if_false;</p><br>
+                        <p class="code">condition <strong>?</strong> expression_if_true : expression_if_false;</p><br>
                         <p class="code">
                             let retirementAge = 65;<br>
                             let myAge = 35;<br>
-                            let isRetired = myAge &gt;= retirementAge ? "Retired" : "Not retired";<br>
+                            let isRetired = myAge &gt;= retirementAge <strong>?</strong> "Retired" : "Not retired";<br>
                             console.log(isRetired);
                         </p>
                     </div>
@@ -75,6 +82,11 @@
                 <h3>Control flow statements</h3>
                 <div>
                     <div>
+                        <p>
+                            "if" is the simpliest of all statements. Executes the code in it only if the condition (in the brackets) is true. <br>
+                            "else" has an extra block of code that executes if condition in the "if" statement is false. <br>
+                            "else...if" gives you even more different blocks of code that are assigned to different conditions.
+                        </p> <br>
                         <p class="code">
                             <strong>if</strong> (asnwer === "yes") { <br>
                             &nbsp;&nbsp;return gameContinue(); <br>
@@ -86,7 +98,7 @@
                             &nbsp;&nbsp;ageValidation = fail; <br>
                             } <br><br>
 
-                            <strong>if</strong> (year ===  2025) { <br>
+                            <strong>if</strong> (year ==  2025) { <br>
                             &nbsp;&nbsp;time = present; <br>
                             } <strong>else if</strong> (year &gt; 2025) { <br>
                             &nbsp;&nbsp;time = future; <br>
@@ -102,22 +114,38 @@
             </div>
             <div class="L L-5">
                 <h1>Switch</h1>
-                <h3>Control flow statements</h3>
+                <h3>another control flow statement</h3>
                 <div>
                     <div>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;Works as an alternative to "else...if" statement, but can execute code for more than one case. It performs different actions based on different options (cases). After executing the code for a certain case, it uses "break" keyword to exit from itself. If it's missing, the code will execute further. <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;The last (optional) case is named "default" and is similar to "else" in "else...if" statement. <br><br>
+                        </p>
                         <p class="code">
-                            switch (colourLike) { <br>
-                                case "blue": <br>
-                                &nbsp;&nbsp;console.log("blue is the sky"); <br>
-                                &nbsp;&nbsp;break; <br>
-                                case "green": <br>
-                                &nbsp;&nbsp;console.log("green is the grass"); <br>
-                                &nbsp;&nbsp;break; <br>
-                                case "pink": <br>
-                                &nbsp;&nbsp;console.log("pink is the pig"); <br>
-                                &nbsp;&nbsp;break; <br>
-                                default: <br>
-                                &nbsp;&nbsp;console.log("no colors for today, love"); <br>
+                            <strong>switch</strong> (expression) { <br>
+                            &nbsp;&nbsp;<strong>case</strong> value1: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return execution1;<span class="comment">// Code to execute if expression === value1</span> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
+                            &nbsp;&nbsp;<strong>case</strong> value2: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;return execution2;<span class="comment">// Code to execute if expression === value2</span> <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
+                            &nbsp;&nbsp;((case...break;) * N)<span class="comment">// ... more cases</span> <br>
+                            &nbsp;&nbsp;<strong>default</strong>: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;// Code to execute if none of the cases match <br>
+                            } <br><br>
+
+                            <strong>switch</strong> (colourLike) { <br>
+                            &nbsp;&nbsp;<strong>case</strong> "blue": <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("blue is the sky"); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
+                            &nbsp;&nbsp;<strong>case</strong> "green": <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("green is the grass"); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
+                            &nbsp;&nbsp;<strong>case</strong> "pink": <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("pink is the pig"); <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>break</strong>; <br>
+                            &nbsp;&nbsp;<strong>default</strong>: <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;console.log("no colors for today, wait until tomorrow"); <br>
                             }
                         </p>
                     </div>
@@ -162,6 +190,10 @@
             <div class="R R-2">
                 <div>
                     <h3>Assignment operators</h3>
+                    <p>
+                        "=" is an assignment operator. <br>
+                        All the operators after that one are called <strong>"compound assignment operators"</strong>, because they perform an assignment and an operation at the same time. <br><br>
+                    </p>
                         <table>
                             <tr>
                                 <th>Operator</th>
@@ -232,35 +264,56 @@
                 <h3>basic loops</h3>
                 <div>
                     <div>
+                        <p>
+                            The loop "for" we use when we know how many times we want to loop. <br>
+                            The "while" start the loop only when the condition is true, then keeps looping as long as it stays true. <br>
+                            The "do...while" is guaranteed to execute at least once, only after the first loop it checks the condition.
+                        </p> <br>
                         <p class="code">
                             <strong>for</strong> (let i = 0; i &lt; 3; i++) { <br>
                             &nbsp;&nbsp;console.log("The number is " + i); <br>
                             } <br><br>
 
                             let i = 0; <br>
-                            <strong>while</strong> (i < 3) { <br>
+                            <strong>while</strong> (i &lt; 3) { <br>
                             &nbsp;&nbsp;console.log("The number is " + i); <br>
                             &nbsp;&nbsp;i++; <span class="comment">// avoid an infinite loop!</span><br>
                             } <br><br>
 
-                            let i =5; <br>
+                            let i = 5; <br>
                             <strong>do</strong> { <span class="comment">// Still being executed</span><br>
                             &nbsp;&nbsp;console.log("The number is " + i); <br>
                             &nbsp;&nbsp;i++; <br>
-                            } <strong>while</strong> (i < 3);
-
-
-
-
-
-
-
-
+                            } <strong>while</strong> (i &lt; 3);
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="R R-5">X</div>
+            <div class="R R-5">
+                <h1>for...of, for...in</h1>
+                <h3>other useful loops</h3>
+                <div>
+                    <div>
+                        <p>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>for...of</strong> <br>
+                            - Loop iterates over the <i>values</i> of iterable objects (ie: arrays, strings, maps, sets). <br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>for...in</strong> <br>
+                            - This loop iterates over the <i>enumerable properties</i> of an object. It's not recommended for arrays.
+                        </p> <br>
+                        <p class="code">
+                            const fruits = ['pear', 'kiwi', 'grspes', 'avocado', 'tomatoe']; <br>
+                            <strong>for</strong> (const fruit <strong>of</strong> fruits) { <br>
+                            console.log(fruit); <br>
+                            } <br><br>
+
+                            const person = { name: "Alice", age: 30 }; <br>
+                            <strong>for</strong> (const key <strong>in</strong> person) { <br>
+                              console.log(`${key}: ${person[key]}`); <br>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="R R-6">X</div>
             <div class="R R-7">X</div>
             <div class="R R-8">X</div>

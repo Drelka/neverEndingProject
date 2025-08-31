@@ -163,14 +163,60 @@
                     </div>
                 </div>
             </div>
-            <div class="L L-6">X</div>
+            <div class="L L-6">
+                <h3>String methods</h3>
+                <div>
+                    <div>
+                        <p>
+                            <strong>.charAt()</strong> returns character at the certain position (can't be negative). <br>
+                            <strong>.at()</strong> is similar to .charAt(), but not so well supported, being introduced in 2022. <br>
+                            <strong>.trim()</strong> removes spaces from both ends.<br>
+                            <strong>.split()</strong> divides a string into an ordered list and returns an array. <br>
+                            <strong>.replace(a, b)</strong> replace the first occurence (a) with a new string (b). <br>
+                            <strong>.replaceAll(a, b)</strong> as above, but replaces all occurences. <br>
+                            <strong>.includes()</strong> checks for a substring inside a string. <br>
+                            <strong>.slice(num1, num2)</strong> returns a new string "sliced" from the original. <br>
+                            <strong>.toUpperCase()</strong> and <strong>.toLowerCase()</strong> convert the entire string. <br>
+                            <strong>startsWith)</strong> and <strong>.endsWith()</strong> check for the "xxx" on the start/end of the string, then return Boolean value. <br>
+                            <strong>.indexOf()</strong> returns the index of the first occurence of a substring.
+                        </p> <br>
+                        <p class="code">
+                            let stringA = " ABCD,efgh,IJKL "; <br><br>
+
+                            console.log(stringA.length); <span class="comment">// returns 16, includes white spaces</span><br><br>
+
+                            console.log(stringA.charAt(0)); <span class="comment">// " ", first character is a space</span><br>
+                            console.log(stringA.at(-1)); <span class="comment">// " ", fist from the end, also a space</span><br><br>
+
+                            let stringB = stringA.trim(); <br>
+                            console.log(stringB); <span class="comment">// "ABCD,efgh,IJKL"</span><br><br>
+                            console.log(stringB.split(",")); <span class="comment">// ["ABCD", "efgh", "IJKL"]</span><br>
+                            console.log(stringB.replace("," "!")); <span class="comment">// "ABCD!efgh,IJKL"</span><br>
+                            console.log(stringB.replaceAll(",", "-")); <span class="comment">// "ABCD-efgh-IJKL"</span><br>
+                            console.log(stringB.includes("ABC")); <span class="comment">// True (Boolean value)</span><br>
+                            console.log(stringB.slice(-1, -6)); <span class="comment">// "h,IJKL"</span><br>
+                            console.log(stringB.toUpperCase()); <span class="comment">// "ABCD,EFGH,IJKL"</span><br>
+                            console.log(stringB.toLowerCase()); <span class="comment">// "acbd,efgh,ijkl"</span><br>
+                            console.log(stringB.startsWith("XXX")); <span class="comment">// False</span><br>
+                            console.log(stringB.indexOf("A")); <span class="comment">// 0</span><br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="L L-7">X</div>
             <div class="L L-8">X</div>
             <div class="L L-9">X</div>
             <div class="L L-10">X</div>
         </div>
 
+
+
+
 <!-- ----------------------------------- Right side starts here---------------------- -->
+
+
+
 
         <div class="mid-div">
             <div class="R R-1">

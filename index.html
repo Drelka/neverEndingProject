@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Never Ending Project</title>
+</head>
+<body>
+
+    <div id="div-box">
+        <div class="mid-div">
+            <div class="L L-1">
+                <h1>let, const<span class="faded">, var</span></h1>
+                <h3> variables</h3>
+                <div>
+                    <div>
+                        <p>
+                            Variables are containers that store your data. You should declare them before you use them. <br>
+                            <strong>Const</strong> creates a variable whose reference cannot be reassigned, while <strong>let</strong> creates a variable that can be reassigned.
+                        </p> <br><br>
+                        <p class="code">
+                            <strong>let</strong> month; <span class="comment">// declaration only</span><br>
+                            month = "January"; <span class="comment">// assignment</span><br>
+                            month = "February"; <span class="comment">// re-assignment</span><br><br>
+                            <strong>const</strong> name = "Joe" <span class="comment">// declaration and assignment</span><br>
+                            <strong>let</strong> age = 22;<br><br>
+                            name = "Jamie"; <span class="comment">// can't reassign value for const, throwing <span class="red-text">error</span></span><br>
+                            age = 33; <span class="comment">// new value is <span class="green-text">valid</span></span>
+                        </p> <br><br>
+                        <p>
+                            There's also a third kind of a variable - <span class="faded"><strong>var</strong></span> - but it's been depreciated and now should be used only to support older browsers (but you can still find it in older projects).
+                        </p> <br><br>
+                        <p class="code">
+                            <strong>var</strong> waistSize = 80; <span class="comment">// don't use unless you must</span> <br>
+                            waistSize = 100; <span class="comment">// can be re-assigned</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="L L-2">
+                <h3>Comparison operators</h3>
+                <p>
+                    They compare two values and return a boolean value - either True, or False. <br><br>
+                </p>
+                <div>
+                    <div>
+                        <p>==</p>
+                        <p>===</p>
+                        <p>!=</p>
+                        <p>!==</p>
+                        <p>&gt;</p>
+                        <p>&lt;</p>
+                        <p>&gt;=</p>
+                        <p>&lt;=</p>
+                        <p>?</p>
+                    </div>
+                    <div>
+                        <p>equal</p>
+                        <p>strict equal (value and type)</p>
+                        <p>not equal</p>
+                        <p>strict not equal</p>
+                        <p>greater than</p>
+                        <p>lesser than</p>
+                        <p>greater than or equal</p>
+                        <p>lesser than or equal</p>
+                        <p>ternary operator</p>
+                    </div>
+                </div> <br>
+                <p>
+                    6 falsy values in JavaScript that return False, are: <br><br>
+                    -<strong>false</strong>, -<strong>0</strong>, -<strong><span class="darkGreyBackground">" "</span></strong> or <strong><span class="darkGreyBackground">' '</span></strong> or <span class="darkGreyBackground">&nbsp;</span> (an empty string / empty space), <br>-<strong>null</strong>, -<strong>undefined</strong>, -<strong>NaN</strong>. <br><br>
+                    All the rest is considered a True value.
+                </p>
+            </div>
+            <div class="L L-3">
+                <h1>"?"</h1>
+                <h3>Ternary operator</h3>
+                <div>
+                    <div>
+                        <p> ...is a one-line code for a simple "if...else" statement and returns one of two expressions, just such:</p><br><br>
+                        <p class="code">condition <strong>?</strong> expression_if_true : expression_if_false;</p><br>
+                        <p class="code">
+                            let retirementAge = 65;<br>
+                            let myAge = 35;<br>
+                            let isRetired = myAge &gt;= retirementAge <strong>?</strong> "Retired" : "Not retired";<br>
+                            console.log(isRetired);
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="L L-4">
+                <h1>if, else, else if</h1>
+                <h3>Control flow statements</h3>
+                <div>
+                    <div>
+                        <p>
+                            "if" is the simpliest of all statements. Executes the code in it only if the condition (in the brackets) is true. <br>
+                            "else" has an extra block of code that executes if condition in the "if" statement is false. <br>
+                            "else...if" gives you even more different blocks of code that are assigned to different conditions.
+                        </p> <br>
+                        <p class="code">
+                            <strong>if</strong> (asnwer === "yes") { <br>
+                            &emsp;return gameContinue(); <br>
+                            } <br><br>
+
+                            <strong>if</strong> (age &gt;= 18) { <br>
+                            &emsp;ageValidation = pass; <br>
+                            } <strong>else</strong> { <br>
+                            &emsp;ageValidation = fail; <br>
+                            } <br><br>
+
+                            <strong>if</strong> (year ==  2025) { <br>
+                            &emsp;time = present; <br>
+                            } <strong>else if</strong> (year &gt; 2025) { <br>
+                            &emsp;time = future; <br>
+                            } <strong>else if</strong> (year &lt; 2025) { <br>
+                            &emsp;time = past; <br>
+                            } <strong>else</strong> { <br>
+                            &emsp;return error404(); <br>
+                            } 
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="L L-5">
+                <h1>Switch</h1>
+                <h3>another control flow statement</h3>
+                <div>
+                    <div>
+                        <p>
+                            &emsp;Works as an alternative to "else...if" statement, but can execute code for more than one case. It performs different actions based on different options (cases). After executing the code for a certain case, it uses "break" keyword to exit from itself. If it's missing, the code will execute further. <br>
+                            &emsp;The last (optional) case is named "default" and is similar to "else" in "else...if" statement. <br><br>
+                        </p>
+                        <p class="code">
+                            <strong>switch</strong> (expression) { <br>
+                            &emsp;<strong>case</strong> value1: <br>
+                            &emsp;&emsp;return execution1;<span class="comment">// Code to execute if expression === value1</span> <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>case</strong> value2: <br>
+                            &emsp;&emsp;return execution2;<span class="comment">// Code to execute if expression === value2</span> <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;((case...break;) * N)<span class="comment">// ... more cases</span> <br>
+                            &emsp;<strong>default</strong>: <br>
+                            &emsp;&emsp;// Code to execute if none of the cases match <br>
+                            } <br><br>
+
+                            <strong>switch</strong> (colourLike) { <br>
+                            &emsp;<strong>case</strong> "blue": <br>
+                            &emsp;&emsp;console.log("blue is the sky"); <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>case</strong> "green": <br>
+                            &emsp;&emsp;console.log("green is the grass"); <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>case</strong> "pink": <br>
+                            &emsp;&emsp;console.log("pink is the pig"); <br>
+                            &emsp;&emsp;<strong>break</strong>; <br>
+                            &emsp;<strong>default</strong>: <br>
+                            &emsp;&emsp;console.log("no colors for today, wait until tomorrow"); <br>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="L L-6">
+                <h3>String methods</h3>
+                <div>
+                    <div>
+                        <p>
+                            <strong>.charAt()</strong> returns character at the certain position (can't be negative). <br>
+                            <strong>.at()</strong> is similar to .charAt(), but not so well supported, being introduced in 2022. <br>
+                            <strong>.trim()</strong> removes spaces from both ends.<br>
+                            <strong>.split()</strong> divides a string into an ordered list and returns an array. <br>
+                            <strong>.replace(a, b)</strong> replace the first occurence (a) with a new string (b). <br>
+                            <strong>.replaceAll(a, b)</strong> as above, but replaces all occurences. <br>
+                            <strong>.includes()</strong> checks for a substring inside a string. <br>
+                            <strong>.slice(num1, num2)</strong> returns a new string "sliced" from the original. <br>
+                            <strong>.toUpperCase()</strong> and <strong>.toLowerCase()</strong> convert the entire string. <br>
+                            <strong>startsWith)</strong> and <strong>.endsWith()</strong> check for the "xxx" on the start/end of the string, then return Boolean value. <br>
+                            <strong>.indexOf()</strong> returns the index of the first occurence of a substring.
+                        </p> <br>
+                        <p class="code">
+                            let stringA = " ABCD,efgh,IJKL "; <br><br>
+
+                            console.log(stringA.length); <span class="comment">// returns 16, includes white spaces</span><br><br>
+
+                            console.log(stringA.charAt(0)); <span class="comment">// " ", first character is a space</span><br>
+                            console.log(stringA.at(-1)); <span class="comment">// " ", fist from the end, also a space</span><br><br>
+
+                            let stringB = stringA.trim(); <br>
+                            console.log(stringB); <span class="comment">// "ABCD,efgh,IJKL"</span><br><br>
+                            console.log(stringB.split(",")); <span class="comment">// ["ABCD", "efgh", "IJKL"]</span><br>
+                            console.log(stringB.replace("," "!")); <span class="comment">// "ABCD!efgh,IJKL"</span><br>
+                            console.log(stringB.replaceAll(",", "-")); <span class="comment">// "ABCD-efgh-IJKL"</span><br>
+                            console.log(stringB.includes("ABC")); <span class="comment">// True (Boolean value)</span><br>
+                            console.log(stringB.slice(-1, -6)); <span class="comment">// "h,IJKL"</span><br>
+                            console.log(stringB.toUpperCase()); <span class="comment">// "ABCD,EFGH,IJKL"</span><br>
+                            console.log(stringB.toLowerCase()); <span class="comment">// "acbd,efgh,ijkl"</span><br>
+                            console.log(stringB.startsWith("XXX")); <span class="comment">// False</span><br>
+                            console.log(stringB.indexOf("A")); <span class="comment">// 0</span><br>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="L L-7">X</div>
+            <div class="L L-8">X</div>
+            <div class="L L-9">X</div>
+            <div class="L L-10">X</div>
+        </div>
+
+
+
+
+<!-- ----------------------------------- Right side starts here---------------------- -->
+
+
+
+
+        <div class="mid-div">
+            <div class="R R-1">
+                <h3>Arithmetic operators</h3>
+                <p>
+                    Mainly used to perform calculation on numbers, but also handling different numeric data and creating functionality in the web.
+                </p> <br>
+                <div>
+                    <div>
+                        <p class="code">
+                            let a = 6; <br>
+                            let b = 3; <br>
+                            console.log (a + b); <span class="comment">// Addition</span> <br>
+                            console.log (a - b); <span class="comment">// Subtraction</span> <br>
+                            console.log (a * b); <span class="comment">// Multiplication</span> <br>
+                            console.log (a / b); <span class="comment">// Division</span> <br>
+                            console.log (a % b); <span class="comment">// Remainder (Modulus)</span> <br>
+                            console.log( a ** b); <span class="comment">// Exponentiation</span>
+                        </p> <br>
+                        <p>
+                            These two are used to increase and decrease a numeric variable's value by 1:
+                        </p> <br>
+                        <p class="code">
+                            let c = 5; <br>
+                            c++; <span class="comment">// Increment (c+1)</span> <br>
+                            console.log(c); <span class="comment">// 6</span> <br>
+                            c--; <span class="comment">// Decrement (c-1)</span> <br>
+                            console.log(c); <span class="comment">// 5</span> <br>
+                        </p> <br>
+                        <p>
+                            "+" is also used for strings concatenation. Any operand added to a string is treated as a string.
+                        </p> <br>
+                        <p class="code">
+                            let whazzup = "what<span class="darkGreyBackground">&nbsp;</span>" + "is<span class="darkGreyBackground">&nbsp;</span>" + "up"; <span class="comment">// "what is up"</span> <br>
+                            let xyz = "High<span class="darkGreyBackground">&nbsp;</span>" + 5 + "!"; <span class="comment">// "High 5!"</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="R R-2">
+                <div>
+                    <h3>Assignment operators</h3>
+                    <p>
+                        "=" is an assignment operator. <br>
+                        All the operators after that one are called <strong>"compound assignment operators"</strong>, because they perform an assignment and an operation at the same time. <br><br>
+                    </p>
+                        <table>
+                            <tr>
+                                <th>Operator</th>
+                                <th>How to use</th>
+                                <th>Understand as</th>
+                            </tr>
+                            <tr>
+                                <td>=</td>
+                                <td>x = y</td>
+                                <td>x = y</td>
+                            </tr>
+                            <tr>
+                                <td>+=</td>
+                                <td>x += y</td>
+                                <td>x = x + y</td>
+                            </tr>
+                            <tr>
+                                <td>-=</td>
+                                <td>x -= y</td>
+                                <td>x = x -y</td>
+                            </tr>
+                            <tr>
+                                <td>*=</td>
+                                <td>x *= y</td>
+                                <td>x = x * y</td>
+                            </tr>
+                            <tr>
+                                <td>/=</td>
+                                <td>x /= y</td>
+                                <td>x = x / y</td>
+                            </tr>
+                            <tr>
+                                <td>%=</td>
+                                <td>x %= y</td>
+                                <td>x = x % y</td>
+                            </tr>
+                            <tr>
+                                <td>**=</td>
+                                <td>x **= y</td>
+                                <td>x = x ** y</td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+            <div class="R R-3">
+                <h1>&#96; ... &#96;</h1>
+                <h3>Backquotes / Backticks</h3>
+                <div>
+                    <div>
+                        <p>... are used to define template literals - a special type of string allowing us to embed expressions and JavaScript in them. You can also declare them over multiple lines. </p><br><br>
+                        <p class="code">
+                            let name = "Christina";<br>
+                            let greeting = `Hello, ${name}. Nice to meet you.`;<br><br>
+                            let age = 22;<br>
+                            let answer = `Hi. My name is ${name}. I&apos;m ${age} years old.`;<br><br>
+
+                            let brotherAge = 15;<br>
+                            console.log(`I am ${age - brotherAge} years older than my brother.`);<br><br>
+                            let msg = `I can spread the message <span class="comment">// I can spread the message</span> <br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;into multiple <span class="comment">// into multiple &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span> <br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;lines.`;<span class="comment">// lines.&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="R R-4">
+                <h1>for, while, do...while</h1>
+                <h3>basic loops</h3>
+                <div>
+                    <div>
+                        <p>
+                            The loop "for" we use when we know how many times we want to loop. <br>
+                            The "while" start the loop only when the condition is true, then keeps looping as long as it stays true. <br>
+                            The "do...while" is guaranteed to execute at least once. After first execusion it checks for the condition.
+                        </p> <br>
+                        <p class="code">
+                            <strong>for</strong> (let i = 0; i &lt; 3; i++) { <br>
+                            &emsp;console.log("The number is " + i); <br>
+                            } <br><br>
+
+                            let i = 0; <br>
+                            <strong>while</strong> (i &lt; 3) { <br>
+                            &emsp;console.log("The number is " + i); <br>
+                            &emsp;i++; <span class="comment"> --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; // remember to place condition here </span><br>
+                            } <span class="comment">to avoid an infinite loop!</span><br><br>
+
+                            let i = 5; <br>
+                            <strong>do</strong> { <span class="comment"> // this guarantees execution</span><br>
+                            &emsp;console.log("The number is " + i); <br>
+                            &emsp;i++; <span class="comment">--&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp; --&gt; &emsp;&emsp;&emsp;&emsp;&emsp;&emsp; // avoid an infinite loop!</span><br>
+                            } <strong>while</strong> (i &lt; 3); 
+                        </p> <br>
+                        <p>
+                            <strong>REMEMBER: <br>
+                                To prevent a "while" / "do...while" loop from becoming infinite, a statement inside the loop must modify the condition so it can eventually become false.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="R R-5">
+                <h1>for...of, for...in</h1>
+                <h3>other useful loops</h3>
+                <div>
+                    <div>
+                        <p>
+                            &emsp;<strong>for...of</strong> <br>
+                            - Loop iterates over the <i>values</i> of iterable objects (ie: arrays, strings, maps, sets). <br>
+                            &emsp;<strong>for...in</strong> <br>
+                            - This loop iterates over the <i>enumerable properties</i> of an object. It's not recommended for arrays.
+                        </p> <br>
+                        <p class="code">
+                            const fruits = ['pear', 'kiwi', 'grspes', 'avocado', 'tomatoe']; <br>
+                            &emsp;<strong>for</strong> (const fruit <strong>of</strong> fruits) { <br>
+                            console.log(fruit); <br>
+                            } <br><br>
+
+                            const person = { name: "Alice", age: 30 }; <br>
+                            &emsp;<strong>for</strong> (const key <strong>in</strong> person) { <br>
+                              console.log(`${key}: ${person[key]}`); <br>
+                            }
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="R R-6">X</div>
+            <div class="R R-7">X</div>
+            <div class="R R-8">X</div>
+            <div class="R R-9">X</div>
+            <div class="R R-10">X</div>
+        </div>
+    </div>
+
+
+<script src="./script.js"></script>
+</body>
+</html>
